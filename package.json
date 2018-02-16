@@ -1,0 +1,50 @@
+{
+  "name": "react-dataprovider",
+  "version": "1.0.0",
+  "description": "A framework which will fetch data from backends and provide them to React.js components.",
+  "main": "index.js",
+  "scripts": {
+    "build": "babel src --ignore src/config,src/samples,src/test  --out-dir .",
+    "build-samples": "webpack --config src/samples/config/webpack.config.js --progress --profile --colors",
+    "start-samples": "node dist/server.js",
+    "test": "set NODE_ENV=development && mocha --no-deprecation --recursive --require babel-register src/test"
+  },
+  "keywords": [
+    "react",
+    "data",
+    "dataprovider",
+    "serverside"
+  ],
+  "author": "Jean-Michel Meyer, by Hextrakt",
+  "license": "MIT",
+  "dependencies": {
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-helmet": "^5.2.0",
+    "react-router-dom": "^4.2.2"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-plugin-transform-es3-member-expression-literals": "^6.22.0",
+    "babel-plugin-transform-es3-property-literals": "^6.22.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "babel-register": "^6.26.0",
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "lowdb": "^1.0.0",
+    "mocha": "^5.0.0",
+    "nocache": "^2.0.0",
+    "restful.js": "^0.9.6",
+    "sinon": "^4.3.0",
+    "unit.js": "^2.0.0",
+    "webpack": "^3.10.0",
+    "webpack-dev-middleware": "^2.0.4",
+    "webpack-hot-middleware": "^2.21.0",
+    "webpack-hot-server-middleware": "^0.3.2",
+    "whatwg-fetch": "^2.0.3"
+  }
+}
