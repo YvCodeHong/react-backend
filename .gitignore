@@ -1,2 +1,4 @@
 /*.js
 /yarn-error.log
+/nbproject
+/node_modules
