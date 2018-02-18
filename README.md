@@ -9,7 +9,7 @@ nor with a REST API. We wanted a simple (and beautiful) solution, and didnt' wan
 [Redux](https://redux.js.org/) provides the frame to manage UI state, and respond to user actions, but doesn't help on the server side, where initial state is immutable.
 So we built this framework to :
 * be able to render a complete DOM tree at the server side
-* be able to specify which data are needed at each application path,
+* be able to specify which data are needed at each application path
 * write code in a declarative way, in a "react-like" way, leveraging React Router API v4
 * provide data at the server side as well as at the client side
 * provide preloaded data (in a javascript variable) to initialize client side components
@@ -49,7 +49,7 @@ and navigate to [http://localhost:3000](http://localhost:3000)
 ## Features and usage
 
 Use the `NeedsData` component to **declare the application data needs**.
-Example 1: Tell that *getUserInfo* is needed when navigating to `/user` :
+Example 1. Tell that *getUserInfo* is needed when navigating to `/user` :
 
 ```jsx
 <Route path='/user' render={() => (
@@ -118,13 +118,14 @@ Wrap all your data needs with a `ProviderRules` component, and give it the dataP
 ```jsx
 <ProviderRules dataProvider={myDataProvider}>
   <Route path='/user' render={() => (
-    <NeedsData needs="getUserInfo">
+    <NeedsData needs="getUserInfo"/>
   )}/>
 </ProviderRules>
 ```
 
 The ProviderRules component will be responsible to collect all the data needs which are declared in its subtree.
-Place all your presentational components within a `WithData` component. This will have two benefits:
+
+Place all your **presentational components** within a `WithData` component. This will have two benefits:
 
 * First, your presentation will not be rendered until the data needs are resolved
 * Secondly, you can access the dataProvider instance, either from the React context or from the *dataProvider* prop when using the `withDataProvider` [HOC](https://reactjs.org/docs/higher-order-components.html).
