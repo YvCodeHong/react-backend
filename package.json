@@ -1,6 +1,6 @@
 {
   "name": "react-backend",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "A framework which help fetch data from backends and provide them to React.js components.",
   "main": "index.js",
   "repository" :

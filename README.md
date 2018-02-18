@@ -160,13 +160,13 @@ In order to **render the complete DOM tree at the server side**, you can use the
 const context = {}
 const myDataProvider = new MyDataProvider()
 
-new ServerRenderer(serverProvider, 
+new ServerRenderer(myDataProvider, 
   (<StaticRouter location={ req.url } context={ context }>
     <Fragment>
       <ProviderRules dataProvider={myDataProvider}>
         <DataNeeds/>
       </ProviderRules>
-      <WithData dataProvider={serverProvider}>
+      <WithData dataProvider={myDataProvider}>
         <App/>
       </WithData>  
     </Fragment>
@@ -174,7 +174,7 @@ new ServerRenderer(serverProvider,
 )
 .render()
 .then(markup => {
-  let data = serverProvider.values
+  let data = myDataProvider.values
   res.status(200).send(Template({data, markup}))
 })
 .catch (function (error) {
