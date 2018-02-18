@@ -1,11 +1,11 @@
 {
-  "name": "react-backend",
+  "name": "react-backend-samples",
   "version": "1.0.4",
-  "description": "A framework which help fetch data from backends and provide them to React.js components.",
+  "description": "Samples for react-backend",
   "main": "index.js",
   "scripts": {
-    "build": "babel src --ignore src/config,src/samples,src/test  --out-dir .",
-    "test": "set NODE_ENV=development && mocha --no-deprecation --recursive --require babel-register src/test"
+    "build-samples": "webpack --config config/webpack.config.js --progress --profile --colors",
+    "start-samples": "node ../../dist/server.js"
   },
   "keywords": [
     "react",
@@ -17,6 +17,7 @@
   "license": "MIT",
   "dependencies": {
     "react": "^16.2.0",
+    "react-backend": "^1.0.3",
     "react-dom": "^16.2.0",
     "react-helmet": "^5.2.0",
     "react-router-dom": "^4.2.2"
@@ -35,8 +36,7 @@
     "express": "^4.16.2",
     "mocha": "^5.0.0",
     "nocache": "^2.0.0",
-    "sinon": "^4.3.0",
-    "unit.js": "^2.0.0",
+    "restful.js": "^0.9.6",
     "webpack": "^3.10.0",
     "webpack-dev-middleware": "^2.0.4",
     "webpack-hot-middleware": "^2.21.0",

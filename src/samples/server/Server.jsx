@@ -6,9 +6,9 @@ import { StaticRouter } from 'react-router-dom'
 import express from 'express'
 import path from 'path'
 
-import { ProviderRules, WithData } from '../../'
+import { ProviderRules, WithData } from 'react-backend'
 import ServerDataProvider from './ServerDataProvider'
-import ServerRenderer from '../../ServerRenderer'
+import ServerRenderer from 'react-backend/ServerRenderer'
 
 import DataNeeds from '../common/DataNeeds'
 import App from '../common/App'

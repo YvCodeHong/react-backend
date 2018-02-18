@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
 import { Switch, Route, Link } from 'react-router-dom'
 
-import { withDataProvider } from '../../'
+import { withDataProvider } from 'react-backend'
 
 const HomePage = withDataProvider(props => {
   return (

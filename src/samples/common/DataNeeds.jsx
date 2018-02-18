@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react';
 import { StaticRouter, Switch, Route, Link } from 'react-router-dom'
-import { NeedsData, NoDataNeed } from '../../'
+import { NeedsData, NoDataNeed } from 'react-backend'
 
 function DataNeeds() {
   return(

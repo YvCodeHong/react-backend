@@ -1,4 +1,4 @@
-import DataProvider from '../../'
+import DataProvider from 'react-backend'
 
 class ServerDataProvider extends DataProvider {
   

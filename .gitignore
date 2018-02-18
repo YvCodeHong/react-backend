@@ -2,3 +2,7 @@
 /yarn-error.log
 /nbproject
 /node_modules
+/src/samples/node_modules
+/build
+/dist
+/src/samples/yarn-error.log
