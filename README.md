@@ -5,7 +5,7 @@ A framework which help fetch data from backends and provide them to
 ## Motivations
 
 React.js doesn't provide any core feature to interface with a database back-end 
-nor with a REST API. At [Hextrakt](https://www.hextrakt.com/), we wanted a simple (and beautiful) solution, and didnt' want to learn a new language such as [GraphQL/Relay](https://facebook.github.io/relay/).  
+nor with a REST API. At [Hextrakt](https://www.hextrakt.com/), we wanted a simple (and beautiful) solution, and didn't want to learn a new language such as [GraphQL/Relay](https://facebook.github.io/relay/).  
 [Redux](https://redux.js.org/) provides the frame to manage UI state, and respond to user actions, but doesn't help on the server side, where initial state is immutable.  
 So we built this framework to :
 * be able to render a complete DOM tree at the server side
