@@ -33,8 +33,7 @@ class WithData extends ProviderRules {
   }
   
   /**
-   * When there is 'reload' in the query string,
-   * this component will wait until all the data from the backend are ready (or in error)
+   * This component will wait until all the data from the backend are ready (or in error)
    * and then will update the component tree.
    * @returns {Boolean}
    */

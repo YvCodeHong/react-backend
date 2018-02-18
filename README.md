@@ -204,9 +204,9 @@ export default ({ data, markup }) => {
 You can fin all the sample code in the [samples](https://github.com/Hextrakt/react-backend/tree/master/src/samples) 
 directory of the [react-backend git repository](https://github.com/Hextrakt/react-backend).
 
-How to declare your data needs: [DataNeeds.jsx](https://github.com/Hextrakt/react-backend/blob/master/src/samples/common/DataNeeds.jsx)
-Write your server data provider: [ServerDataProvider.js](https://github.com/Hextrakt/react-backend/blob/master/src/samples/server/ServerDataProvider.js)
-Write your client data provider: [ClientDataProvider.js](https://github.com/Hextrakt/react-backend/blob/master/src/samples/client/ClientDataProvider.js)
-Write your react application: [App.jsx](https://github.com/Hextrakt/react-backend/blob/master/src/samples/common/App.jsx)
-Write your client bundle: [Client.jsx](https://github.com/Hextrakt/react-backend/blob/master/src/samples/client/Client.jsx)
-Write your server handler: [Server.jsx](https://github.com/Hextrakt/react-backend/blob/master/src/samples/server/Server.jsx)
+* How to declare your data needs: [DataNeeds.jsx](https://github.com/Hextrakt/react-backend/blob/master/src/samples/common/DataNeeds.jsx)
+* Write your server data provider: [ServerDataProvider.js](https://github.com/Hextrakt/react-backend/blob/master/src/samples/server/ServerDataProvider.js)
+* Write your client data provider: [ClientDataProvider.js](https://github.com/Hextrakt/react-backend/blob/master/src/samples/client/ClientDataProvider.js)
+* Write your react application: [App.jsx](https://github.com/Hextrakt/react-backend/blob/master/src/samples/common/App.jsx)
+* Write your client bundle: [Client.jsx](https://github.com/Hextrakt/react-backend/blob/master/src/samples/client/Client.jsx)
+* Write your server handler: [Server.jsx](https://github.com/Hextrakt/react-backend/blob/master/src/samples/server/Server.jsx)
