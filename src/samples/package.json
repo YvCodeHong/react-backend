@@ -1,6 +1,6 @@
 {
   "name": "react-backend-samples",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Samples for react-backend",
   "main": "index.js",
   "scripts": {
@@ -17,7 +17,7 @@
   "license": "MIT",
   "dependencies": {
     "react": "^16.2.0",
-    "react-backend": "^1.0.4",
+    "react-backend": "^1.0.5",
     "react-dom": "^16.2.0",
     "react-helmet": "^5.2.0",
     "react-router-dom": "^4.2.2"
