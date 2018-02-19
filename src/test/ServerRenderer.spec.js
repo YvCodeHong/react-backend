@@ -21,11 +21,13 @@ describe('ServerRenderer component', function() {
   beforeEach(() => {
     dataProvider = new DataProvider()
     dataProvider.need1 = spy(() => Promise.resolve("need1"))
+    dataProvider.need2Failed = spy(() => Promise.reject("need2Failed"))
     spy(dataProvider, 'getData')
     spy(dataProvider, 'resolveNeeds')
     
     renderPresentation = ({dataProvider}) => (
-      <span>Need1 is {dataProvider.getData('need1')}</span>)
+      <div><span>Need1 is {dataProvider.getData('need1')}</span>
+      <span>Need2 is {dataProvider.getError('need2Failed')}</span></div>)
     renderPresentation = spy(renderPresentation)
     const Presentation = withDataProvider(renderPresentation)
     
@@ -34,6 +36,7 @@ describe('ServerRenderer component', function() {
       <Fragment>
         <ProviderRules dataProvider={dataProvider}>
           <NeedsData needs="need1"/>
+          <NeedsData needs="need2Failed"/>
         </ProviderRules>
         <WithData dataProvider={dataProvider}>
           <Presentation/>
@@ -50,6 +53,7 @@ describe('ServerRenderer component', function() {
   it('will collect data needs', function(done) {
     render.render().then(function() {
       test.bool(dataProvider.need1.calledOnce).isTrue()
+      test.bool(dataProvider.need2Failed.calledOnce).isTrue()
       done()
     }).catch(function() {
       test.undefined("Test should not come here")
@@ -72,10 +76,21 @@ describe('ServerRenderer component', function() {
       test
         .bool(renderPresentation.calledOnce).isTrue()
         .string(markup).contains('need1')
+        .string(markup).contains('need2Failed')
       done()
     }).catch(function() {
       test.undefined("Test should not come here")
     })
   })
   
+  it('will provide errors', function(done) {
+    render.render().then(function(markup) {
+      test
+        .bool(dataProvider.hasErrors()).isTrue()
+        .string(markup).contains('need2Failed')
+      done()
+    }).catch(function() {
+      test.undefined("Test should not come here")
+    })
+  })
 })

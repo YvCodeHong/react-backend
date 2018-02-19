@@ -29,7 +29,7 @@ or
 npm install react-backend
 ```
 
-To test it, first clone the [Git repository](https://github.com/Hextrakt/react-backend). Then, run
+To test it, first clone the Git repository of [react-backend](https://github.com/Hextrakt/react-backend). Then, run
 
 ```js
 yarn install
@@ -104,7 +104,7 @@ You can **declare dependencies** between your data using the `DataProvider.when(
 
 ```js
 getUserInfo() {
-  return when("getUserId").then(id => return database.loadUserInfo(id))
+  return when("getUserId").then(id => database.loadUserInfo(id))
 }
 getUserId() {
   return Promise.resolve(session.getCurrentUserId()) // depending on your session implementation

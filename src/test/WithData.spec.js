@@ -84,5 +84,5 @@ describe('WithData component', function() {
     test.when(() => wd.shouldComponentUpdate())
       .bool(dataProvider.resolveNeeds.called).isTrue()
   })
-  
+
 })

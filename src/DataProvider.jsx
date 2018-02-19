@@ -79,6 +79,7 @@ class DataProvider {
     let self = this
     
     // we store all the promises in the resolvers array
+    // in such a way that they will always resolve (never reject)
     let resolvers = [] 
     Object.values(this.promises).forEach(promise => {
       resolvers.push(promise.then(
@@ -101,10 +102,6 @@ class DataProvider {
         self.values = values
         self.errors = errors
         self._shouldReload = false
-      },
-      function(error) {
-        self._shouldReload = false
-        return Promise.reject(error)
       }
     )
   }
