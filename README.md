@@ -202,7 +202,7 @@ export default ({ data, markup }) => {
 ## Samples
 
 You can find all the sample code in the [samples](https://github.com/Hextrakt/react-backend/tree/master/src/samples) 
-directory of the [react-backend git repository](https://github.com/Hextrakt/react-backend).
+directory of [react-backend](https://github.com/Hextrakt/react-backend).
 
 * How to declare your data needs: [DataNeeds.jsx](https://github.com/Hextrakt/react-backend/blob/master/src/samples/common/DataNeeds.jsx)
 * Write your server data provider: [ServerDataProvider.js](https://github.com/Hextrakt/react-backend/blob/master/src/samples/server/ServerDataProvider.js)
